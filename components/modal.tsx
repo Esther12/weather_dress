@@ -13,7 +13,6 @@ type ClickProps = {
 };
 
 const Modal: React.FC = () => {
-  const dispatch = useDispatch();
   const zip = useSelector((state: RootState) => state.location.zip);
   const [isOpen, setIsOpen] = useState<boolean>(!!zip);
 
@@ -68,7 +67,7 @@ const SpringModal: React.FC<ClickProps> = ({ isOpen, setIsOpen }) => {
                 <AiOutlineEnvironment className="text-indigo-600" />
               </div>
               <h3 className="text-3xl font-bold text-center mb-2">
-                Enter your Zipcode
+                Enter your zipcode
               </h3>
               <form
                 onSubmit={handleSubmit}
